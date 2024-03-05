@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html amp lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>PokerDom</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<style amp-boilerplate>
+		body {
+			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			animation: -amp-start 8s steps(1, end) 0s 1 normal both
+		}
+
+		@-webkit-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-moz-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-ms-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-o-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+	</style><noscript>
+		<style amp-boilerplate>
+			body {
+				-webkit-animation: none;
+				-moz-animation: none;
+				-ms-animation: none;
+				animation: none
+			}
+		</style>
+	</noscript>
+	<link rel="canonical" href="index.html">
+	<style amp-custom>
+		.footer-top a:nth-child(1),
+		.men1 {
+			display: none
+		}
+
+		li,
+		p {
+			line-height: 1.6;
+			padding-left: 0;
+			position: relative
+		}
+
+		ul {
+			position: relative
+		}
+
+
+		h2 {
+			font-size: 20px;
+			display: block;
+			margin-bottom: .8rem;
+			position: relative;
+			color: #4f626a
+		}
+
+		p strong {
+			font-size: 16px;
+			display: block;
+			margin-bottom: .8rem;
+			position: relative;
+			color: #4f626a
+		}
+
+		body {
+			margin: 0;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			position: relative;
+			background: #fff;
+			overflow-x: hidden
+		}
+
+		img {
+			max-width: 100%
+		}
+
+		.menu-fo {
+			display: flex;
+			width: 70%;
+			align-items: center;
+			justify-content: space-evenly
+		}
+
+		.main1 {
+			font-size: 24px;
+			letter-spacing: 0;
+			color: #0c314e;
+			font-weight: 700;
+			position: relative
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none
+		}
+
+		.joyl-slide {
+			margin-bottom: 10px;
+			position: relative
+		}
+
+		.men1 img {
+			width: 70%;
+			z-index: 3
+		}
+
+		.men1 {
+			margin-left: 0
+		}
+
+		footer {
+			height: 80px;
+			margin-top: 20px;
+			border-top: 1px solid #fff;
+			background: #030101;
+			position: relative;
+			font-size: 14px;
+			display: -webkit-flex;
+			display: flex;
+			line-height: 24px;
+			box-sizing: border-box;
+			flex-direction: row-reverse;
+			color: #fafbe5
+		}
+
+		.f2 {
+			margin-right: 30px;
+			display: flex;
+			align-items: center;
+			color: #fafbe5;
+			font-size: 14px
+		}
+
+		.jou-abs {
+			position: absolute;
+			display: flex;
+			align-items: flex-end;
+			left: 0;
+			right: 0;
+			height: 0%;
+			bottom: 30px
+		}
+
+		.footer-top {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			display: flex;
+			font-size: 16px;
+			color: #fafbe5;
+			margin-right: 0;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between
+		}
+
+		.footer-top div:hover {
+			color: #fff
+		}
+
+		.footer-top a img {
+			width: 80%
+		}
+
+		.footer-top a {
+			display: flex;
+			align-items: center
+		}
+
+		footer .container {
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+			justify-content: left;
+			color: #fff;
+			align-items: center;
+			font-size: 16px;
+			flex-wrap: wrap
+		}
+
+		.container {
+			width: 1300px;
+			margin: 0 auto
+		}
+
+		.main-right {
+			width: 20%
+		}
+
+		.main-left {
+			width: 80%;
+			padding-right: 2%;
+			box-sizing: border-box
+		}
+
+		.men3,
+		.men4 {
+			font-size: 16px;
+			transition: .3s;
+			justify-content: center
+		}
+
+		.men3 {
+			width: 119px;
+			height: 37px;
+			border: 1px solid #ccc;
+			background-image: linear-gradient(2deg, #1a6ba8 0, #378cca 100%);
+			transition: .2s
+		}
+
+		.men4 {
+			width: 149px;
+			height: 37px;
+			background-image: linear-gradient(2deg, #6c932a 0, #83b132 100%);
+			border: 1px solid #ccc
+		}
+
+		.main .container {
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: column
+		}
+
+		.main-right img {
+			position: sticky;
+			position: -webkit-sticky;
+			top: 10px
+		}
+
+		ul {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0
+		}
+
+		li {
+			font-size: 16px;
+			ALIGN-ITEMs: center;
+			display: -webkit-flex;
+			display: flex;
+			padding: 5px 0;
+			position: relative;
+			list-style: none
+		}
+
+		h1 {
+			position: relative;
+			color: #fff;
+			line-height: 1.1;
+			color: #202021;
+			letter-spacing: 2px;
+			font-size: 40px;
+			filter: drop-shadow(0 0 73.5px #151c2e);
+			width: 750px;
+			-webkit-text-stroke: 0 #7cb095
+		}
+
+		h1:before,
+		h2:before {
+			width: 25px;
+			height: 5px;
+			content: ' ';
+			background: #ff9859;
+			left: 0;
+			top: 11px;
+			border-radius: 100px;
+			position: absolute;
+			display: none
+		}
+
+		.joy-left img {
+			width: 100%
+		}
+
+		.main-right img {
+			margin-top: 40px
+		}
+
+		.joy-left {
+			width: 100%;
+			color: #202021;
+			text-align: left;
+			line-height: 1.4;
+			display: flex;
+			flex-direction: row
+		}
+
+		.mob {
+			display: none
+		}
+
+		@media screen and (max-width:1400px) and (min-width:1000px) {
+			h1 {
+				font-size: 48px
+			}
+
+			.footer-top {
+				font-size: 12px
+			}
+
+			.joy-left {
+				width: 100%
+			}
+
+			.footer-top a {
+				display: flex;
+				align-items: center;
+				padding: 0 5px
+			}
+
+			.joy-left img {
+				width: 97%
+			}
+
+			.men3 {
+				padding: 0 10px
+			}
+
+			.men4 {
+				padding: 0 10px
+			}
+
+			.men4 {
+				width: 101px
+			}
+
+			.men3 {
+				width: 104px
+			}
+
+			.container {
+				width: 1050px
+			}
+		}
+
+		@media screen and (max-width:1000px) {
+			.jou-abs {
+				position: relative;
+				display: flex;
+				align-items: flex-end;
+				left: 0;
+				right: 0;
+				height: 80%;
+				bottom: 0;
+				order: 2
+			}
+
+			.footer-top a img {
+				display: none
+			}
+
+			h1 {
+				position: relative;
+				color: #fff;
+				line-height: 1.3;
+				width: auto;
+				font-size: 6vw
+			}
+
+			.men1 img {
+				width: 100%;
+				z-index: 3;
+				margin-bottom: 0
+			}
+
+			.nemob {
+				display: none
+			}
+
+			.container {
+				width: 100%;
+				padding: 0 5vw
+			}
+
+			footer .container {
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: column
+			}
+
+			.main .container {
+				padding: 20px 5vw;
+				display: -webkit-flex;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				align-items: baseline
+			}
+
+			.main1 {
+				font-size: 18px;
+				position: relative
+			}
+
+			img {
+				max-width: 90vw
+			}
+
+			.joyl-slide {
+				margin-bottom: -40px
+			}
+
+			.mob {
+				display: flex
+			}
+
+			.main-right {
+				display: none
+			}
+
+			.joyl-slide {
+				display: flex;
+				flex-direction: column
+			}
+
+			.footer-top {
+				width: 100%;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				display: flex;
+				font-size: 14px;
+				padding-left: 0;
+				box-sizing: border-box;
+				margin-right: 0
+			}
+
+			.menu-fo {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				align-items: center;
+				justify-content: space-evenly;
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+				padding: 15px 0;
+				margin-bottom: 10px
+			}
+
+			.f2 img {
+				margin-right: 0;
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 15px
+			}
+
+			.f2 {
+				margin-right: 0;
+				font-size: 14px;
+				margin-top: 10px;
+				display: flex;
+				flex-direction: column;
+				align-items: baseline
+			}
+
+			footer {
+				height: auto;
+				margin-top: 0;
+				border-top: 0
+			}
+
+			footer .container {
+				flex-direction: row-reverse
+			}
+
+			footer .container {
+				justify-content: center;
+				flex-wrap: wrap;
+				padding: 10px 5vw
+			}
+
+			img {
+				max-width: 100vw
+			}
+
+			.men1 {
+				margin-left: 0;
+				width: 40%
+			}
+
+			.menn {
+				display: flex;
+				width: auto;
+				margin: 0;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%
+			}
+
+			.men3,
+			.men4 {
+				height: 33px;
+				margin-right: 3vw;
+				width: 23vw;
+				margin-right: 0
+			}
+
+			.men4 {
+				height: 33px;
+				width: 23vw
+			}
+
+			.men3,
+			.men4 {
+				padding: 0 3vw;
+				font-size: 3vw
+			}
+
+			.men1 img {
+				width: 85%;
+				z-index: 3
+			}
+		}
+
+		@media screen and (max-width:1000px) {
+
+			h1:before,
+			h2:before,
+			p strong:before {
+				display: none
+			}
+
+			h1,
+			h2,
+			li,
+			p {
+				padding-left: 0
+			}
+
+			.main-left {
+				width: 100%;
+				padding-right: 0
+			}
+
+			.joy-left {
+				width: 100%
+			}
+
+			li,
+			p {
+				line-height: 1.6;
+				font-size: 14px
+			}
+
+			h2,
+			p strong {
+				font-size: 18px
+			}
+		}
+
+		.main-left a {
+			color: #0ea6e1
+		}
+
+		.btn-box {
+			text-align: center;
+			margin-bottom: 15px
+		}
+
+		.btn-box a {
+			display: inline-block;
+			white-space: normal;
+			color: #fff
+		}
+
+		.btn-box a:hover {
+			opacity: .8;
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease
+		}
+
+		.btn-size-big {
+			padding: .5rem 1rem;
+			font-size: 1.25rem;
+			line-height: 1.5;
+			background-image: linear-gradient(2deg, #2ecc71 0, #2ecc71 100%);
+			color: #fff
+		}
+
+		.main-left ul {
+			list-style: square
+		}
+
+		.main-left ol {
+			list-style: decimal
+		}
+
+		.main-left ol,
+		.main-left ul {
+			margin: 0 0 20px 40px
+		}
+
+		.main-left li {
+			margin-bottom: 5px
+		}
+
+		.main-left li {
+			display: list-item;
+			list-style-position: inside
+		}
+
+		ol {
+			list-style-type: decimal;
+			list-style-position: inside;
+			-webkit-margin-before: 1em;
+			-webkit-margin-after: 1em;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+			-webkit-padding-start: 0
+		}
+
+		.main-left ol li {
+			list-style: decimal
+		}
+
+		@media (min-width: 600px) {
+			.header__btn {
+				display: none;
+			}
+
+			.mob-menu {
+				display: none;
+			}
+
+		}
+
+		.header__btn {
+			background: transparent;
+			width: 30px;
+			height: 20px;
+			border: none;
+			border-top: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			position: relative;
+		}
+
+		.header__btn::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			background: #fff;
+			height: 2px;
+			margin-top: -1px;
+		}
+
+		.header {
+			background: #030101;
+			margin-bottom: 20px;
+		}
+
+		.header__logo {
+			max-width: 200px;
+		}
+
+		.header__logo img {
+			width: 100%;
+
+		}
+
+		.header__body {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 1330px;
+			padding: 0 15px;
+			margin: 0 auto;
+		}
+
+		.reviews__author {
+			font-weight: 500;
+			font-size: 18px;
+		}
+
+		.mob-menu {
+			position: fixed;
+			left: 0;
+			top: 91px;
+			width: 100%;
+			background: #030101;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: 0.3s ease 0s;
+		}
+
+		.active .mob-menu {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		.active .header__btn {
+			opacity: 0.5;
+		}
+
+		.mob-menu__list {
+			padding: 10px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.mob-menu__link {
+			color: #fff;
+			font-weight: 500;
+		}
+
+		.error h1 {
+			font-size: 30px;
+			text-align: center;
+		}
+
+		.games {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		.games__list {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 15px
+		}
+
+		.games__item {
+			position: relative;
+			padding-bottom: 60%;
+		}
+
+		.games__item img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width:700px) {
+			.games__list {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	</style>
+
+	<link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body
+	class="home page-template page-template-main page-template-main-php page page-id-114 wp-embed-responsive singular image-filters-enabled">
+	<header class="header">
+		<div class="header__body">
+			<div class="header__logo">
+				<img src="content/img/logo.png" alt="">
+			</div>
+			<button class="header__btn"></button>
+		</div>
+	</header>
+	<div class="mob-menu">
+		<div class="mob-menu__list">
+			<a class="mob-menu__link" href="">Вход</a>
+			<a class="mob-menu__link" href="">Регистрация</a>
+			<a class="mob-menu__link" href="">Зеркало</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container">
+			<div class="games">
+				<div class="games__list">
+					<a class="games__item" href="">
+						<img src="content/img/games/1.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/2.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/3.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/4.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/5.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/6.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/7.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/8.webp" alt="">
+					</a>
+					<a class="games__item" href="">
+						<img src="content/img/games/9.webp" alt="">
+					</a>
+				</div>
+			</div>
+			<h1 style="margin:0px;font-size:inherit">Онлайн казино PokerDom</h1>
+			<div class="joy-left">
+				<p>PokerDom – это современное онлайн-казино, получившее лицензию от главного государственного регулятора. Казино
+					обслуживает игроков из более чем 180 стран мира благодаря международной лицензии.</p>
+			</div>
+			<div style="display:flex;flex-direction:row">
+				<div class="joy-left">
+					<div class="main-left">
+						<div class="btn-box"><a class="btn btn-size-big" href="" target="_blank">ПЕРЕЙТИ В КАЗИНО POKERDOM</a>
+						</div>
+
+						<p>
+							На игровой площадке предлагается около 100 автоматов собственного производства, включая слоты, рулетку,
+							блэкджек, покер и колесо удачи. Игроки могут наслаждаться играми через браузер или скачать фирменное
+							приложение казино для смартфонов и ПК. На сайте PokerDom онлайн также доступны классические игровые
+							автоматы, хотя их количество не очень велико. Особенностью казино является возможность играть в
+							демо-режиме
+							для всех игр, наличие приложения и клиента для ПК, а также частые розыгрыши и турниры по джекпоту.
+						</p>
+						<h2>Вход на официальный сайт и зеркало PokerDom Casino</h2>
+						<p>
+							PokerDom дизайн уникален и отличается от обычных казино. На первый взгляд, может показаться несколько
+							запутанным, но понять его интерфейс не составит большого труда, а пользователи быстро смогут
+							ориентироваться на сайте.
+						</p>
+						<p>Сайт казино ПокерДом состоит из четырех функциональных разделов:</p>
+						<ol>
+							<li>"Загрузить": Этот раздел представлен в виде кнопки загрузки. Щелкнув на нее, пользователь переходит на
+								страницу, где можно скачать клиентское приложение для ПК или мобильное приложение.</li>
+							<li>
+								"Информация”: Эта кнопка содержит изображение буквы "i”. При нажатии на нее, пользователь может
+								ознакомиться со всеми доступными азартными развлечениями, узнать компанию и получить ответы на
+								популярные
+								вопросы.
+							</li>
+							<li>Логин: Кнопка авторизации в казино ПокерДом. Здесь можно создать аккаунт.</li>
+							<li>"Техподдержка": Этот раздел оформлен в виде значка диалога в центре интерфейса сайта. Здесь игроки
+								могут обратиться за помощью в службу поддержки.</li>
+						</ol>
+						<h2>Регистрация</h2>
+						<p>Казино ПокерДом предлагает несколько удобных способов регистрации, которые занимают всего несколько
+							минут:</p>
+						<ol>
+							<li>Перейдите на официальный сайт.</li>
+							<li>Нажмите кнопку "Логин", расположенную в центре страницы.</li>
+							<li>Выберите один из доступных вариантов регистрации: по телефону или по электронной почте. Для этого
+								примера рассмотрим регистрацию посредством электронной почты.</li>
+							<li>Нажмите "Принять”.</li>
+							<li>Выберите свою страну из списка.</li>
+							<li>Поставьте галочку напротив пункта, вам исполнилось 21 год.</li>
+							<li>Введите свой адрес электронной почты.</li>
+							<li>Щелкните "Принять” еще раз.</li>
+							<li>Укажите дату рождения и нажмите на зеленую кнопку со стрелкой, чтобы перейти к следующему шагу.</li>
+							<li>Выберите валюту, предлагаемую только рублями.</li>
+							<li>Введите пароль и повторите его в поле. Этот пароль будет использоваться для входа в аккаунт в ПокерДом
+								казино.</li>
+							<li>Снова нажмите кнопку "Принять”.</li>
+							<li>Оставайтесь на странице и проверьте свою почту.</li>
+							<li>Откройте письмо от казино, содержащее шестизначный код проверки.</li>
+							<li>Вернитесь в форму регистрации на сайте ПокерДом казино.</li>
+							<li>Введите полученный код в поле.</li>
+							<li>Подтвердите свои действия.</li>
+						</ol>
+						<p>Готово! Регистрация завершена, и вы автоматически войдете в систему казино.</p>
+						<h2>Верификация</h2>
+						<p>ПокерДом обязал своих гемблеров пройти верификацию в соответствии с требованиями. Эта процедура
+							необходима для того, чтобы могли беспрепятственно выводить свои выигрыши.</p>
+						<p>Чтобы пройти верификацию, выполните следующие действия:</p>
+						<ol>
+							<li>Авторизуйтесь на сайте казино, используя свои данные.</li>
+							<li>Щелкните раздел "Аккаунт”.</li>
+							<li>Выберите "Личные данные”.</li>
+						</ol>
+						<p>
+							Если вы выбираете проверку документов, заполните анкету, указав ФИО, дату рождения, серию и номер
+							паспорта, а также адрес проживания. Загрузите фото вашего документа, нажав изображение скрепки в последней
+							строке анкеты. Подтвердите ваши действия и дождитесь проверки.
+						</p>
+						<p>Обычно проверка документов длится до 24 часов. После успешной верификации, вы получите уведомление по
+							электронной почте.</p>
+						<h2>Вход в личный кабинет</h2>
+						<p>Вход в личный кабинет осуществляется с помощью логина и пароля, указанных при регистрации. Для
+							дополнительной безопасности авторизация требует подтверждения через двухфакторную аутентификацию.</p>
+						<p>
+							В казино ПокерДом вход в личный кабинет производится путем ввода логина и пароля, которые вы указали при
+							регистрации. С целью обеспечения дополнительной безопасности аккаунта, по умолчанию используется
+							двухфакторная аутентификация, требующая подтверждения при каждой авторизации. Эта дополнительная защита
+							является важным элементом для обеспечения безопасности личных данных игроков.
+						</p>
+						<p>Для входа в личный кабинет, выполните следующие шаги:</p>
+						<ol>
+							<li>Зайдите на официальный сайт игрового заведения.</li>
+							<li>Нажмите кнопку "Логин” на веб-сайте.</li>
+							<li>Укажите свой номер телефона или электронную почту в зависимости от способа регистрации.</li>
+							<li>Введите пароль.</li>
+							<li>Введите 6-значный код проверки. Этот код будет выслан вам либо на электронную почту, либо в сообщении
+								SMS.</li>
+						</ol>
+						<p>
+							После успешной авторизации на сайте, нажмите кнопку Аккаунт, которая расположена на месте кнопки для входа
+							в казино. Это позволит вам получить доступ к личному кабинету, где вы сможете управлять своей учетной
+							записью, просматривать историю транзакций и настраивать параметры вашего профиля.
+						</p>
+						<p>Личный кабинет имеет следующие разделы:</p>
+						<ol>
+							<li>Депозит: Здесь осуществляется пополнение счета.</li>
+							<li>"Выплаты”: Кнопка для вывода средств из аккаунта.</li>
+							<li>История: Здесь отображаются все транзакции, которые были совершены на аккаунте.</li>
+							<li>Настройки: Игроки могут изменить пароль и пройти верификацию.</li>
+							<li>Персональный бонус: Вкладка появляется после первого пополнения счета.</li>
+							<li>"Выход”: Кнопка для выхода из аккаунта.</li>
+						</ol>
+						<p>Казино ПокерДом подробно проработало интерфейс своего сайта, обеспечивая легкий доступ к слотам и
+							функциям личного кабинета.</p>
+						<h2>Бонус казино</h2>
+						<p>Казино ПокерДом предлагает своим клиентам нетипичную бонусную программу, в которой нет постоянных акций,
+							но предоставляются персональные бонусы в зависимости от активности игрока.</p>
+						<p>Давайте рассмотрим основные виды акций, предлагаемых клубом:</p>
+						<ol>
+							<li>
+								Бездепозитный за регистрацию Каждый новый клиент может получить 500 рублей бездепозитного за
+								регистрацию. Чтобы получить этот бонус, нужно создать аккаунт, пройти верификацию и активно играть в
+								слоты.
+								Этот бонус не подлежит отыгрышу и может быть использован только на игровые автоматы в ПокерДом Casino.
+								Выигрыш, полученный из этого бонуса, можно вывести без каких-либо дополнительных условий.
+							</li>
+							<li>
+								Промокоды: Казино ПокерДом время от времени предоставляет промокоды на получение призов. Эти промокоды
+								могут быть размещены на сайтах-партнерах, в социальных сетях или рассылках компании. Промокоды
+								активируются с помощью специальных ссылок и могут обеспечить дополнительные бонусы или преимущества для
+								гемблеров.
+							</li>
+							<li>
+								Программа лояльности: В рамках программы лояльности клиенты могут получить бездепозитный, начисляемый
+								автоматически и случайным образом для активных игроков. Бонусные баллы накапливаются за разные
+								действия игрока, такие как игра в слоты, пополнение счета, верификация аккаунта и участие в акциях и
+								турнирах. Полученные бонусы могут использоваться на игровых автоматах в ПокерДом Casino.
+							</li>
+							<li>Розыгрыш: Казино ПокерДом регулярно проводит розыгрыши бонусов, где можно стать одними из удачных
+								участников и получить дополнительные.</li>
+						</ol>
+						<p>
+							Следует отметить, что бонусы не подлежат классическому отыгрышу, то есть игрокам не нужно играть
+							полученные бонусы перед выводом выигрыша. Бонусы могут быть использованы непосредственно на игровых
+							автоматах,
+							а выигрыш можно вывести на карту без дополнительных условий.
+						</p>
+						<p>
+							Информация об актуальных бонусах и акциях может быть доступна на главной странице сайта казино или в
+							разделе "Бонусы" в личном кабинете игрока. Обратите внимание на условия получения и использования бонусов,
+							чтобы максимально воспользоваться преимуществами, предлагаемыми казино ПокерДом.
+						</p>
+						<h2>Бонусы на день рождения</h2>
+						<p>
+							Казино ПокерДом часто предоставляет бонусы своим постоянным игрокам, отмечающим день рождения. Каждый
+							может получить до 50 бесплатных оборотов в качестве подарка на праздничный день. Для получения дневного
+							рождения бонуса в казино, следует выполнить следующие шаги:
+						</p>
+						<ol>
+							<li>Пройти регистрацию на сайте и войти в аккаунт.</li>
+							<li>Подтвердить контактные данные и пройти верификацию.</li>
+							<li>Получить статус "Любитель" и обратиться в службу поддержки компании с просьбой о получении дневного
+								рождения бонуса.</li>
+						</ol>
+						<p>
+							Следует отметить, что размер бонуса будет увеличиваться в зависимости от статуса клиента. Для того чтобы
+							снять выигрыш, полученный с дневного рождения бонуса на ПокерДом casino, необходимо отыграть его по
+							условиям вейджера х30. Важно отметить, что для активации бонуса не нужно делать депозит.
+						</p>
+						<p>
+							Однако следует помнить, что бонус на день рождения в казино будет начислен только в случае, если последний
+							депозит игрока был сделан не менее 90 дней назад. Также для получения бонуса нужно пройти верификацию
+							аккаунта и активировать его в казино в течение одного дня после рождения.
+						</p>
+						<h2>Кэшбэк</h2>
+						<p>В казино ПокерДом также имеет возможность получить бонус в форме кэшбэка. Размер кэшбэка составляет от 5
+							до 10% от суммы проигранных средств. Этот бонус не требует промокода или вейджера для отыгрыша.</p>
+						<h2>Слоты и игровые автоматы</h2>
+						<p>
+							В казино ПокерДом гости могут наслаждаться увлекательными слотами на главной странице их сайта, где
+							представлены как новые, так и популярные слоты. Также есть раздел, где можно найти все доступные игровые
+							автоматы. Хотя фильтр по темам здесь отсутствует, игроки могут воспользоваться строкой поиска по названию
+							для удобного поиска любимых игр.
+						</p>
+						<p>Каждый автомат на сайте имеет ряд общих характеристик, что делает их привлекательными для игроков:</p>
+						<ul>
+							<li>RTP 94-96%: высокий уровень выплат к игроку, что добавляет стимул для игры;</li>
+							<li>средняя и высокая волатильность: игры со значительным потенциалом для выигрышей;</li>
+							<li>наличие демо-режима: возможность попробовать игру без ставок.</li>
+						</ul>
+						<p>
+							Преимущественно представлены классические слоты с 5 барабанами и 10-20 линиями выплат, которые получили
+							большую популярность среди игроков. Важно отметить, что все слоты доступны для бесплатной игры,
+							позволяющей игрокам наслаждаться любимыми автоматами без финансовых рисков.
+						</p>
+						<h2>Другие игры и развлечения</h2>
+						<p>Кроме увлекательных слотов, на ПокерДом игроки могут найти другие увлекательные игры и развлечения, такие
+							как:</p>
+						<ol>
+							<li>Блэк Джек: одна из самых популярных игр карт в мире, доступна только в одном варианте на сайте казино.
+							</li>
+							<li>Рулетка: самая востребованная азартная игра в мире, доступная в двух вариантах: European Roulettes и
+								European Roulette Network.</li>
+							<li>Покер: доступный видео-покер, но покер-рума или игры с живым дилером здесь нет. Представлены две
+								версии: классическая видеоигра Poker и 7 Play Poker Multi-Hand – игра на 7 бревен.</li>
+							<li>Колесо удачи: простая и очень популярная игра с двумя вариантами собственного производства на сайте
+								казино.</li>
+						</ol>
+						<p>Важно отметить, что режим Live по играм с реальным дилером доступен только с компьютера, поэтому играть в
+							него на мобильных устройствах не предусмотрено.</p>
+						<h2>Турниры, лотереи и розыгрыши</h2>
+						<p>ПокерДом казино всегда угощает своих игроков увлекательными турнирами и розыгрышами с главным призом –
+							персональным бонусом на значительную сумму. В клубе проводятся турниры трех типов:</p>
+						<ol>
+							<li>Ежедневные турниры: выставление ставок на деньги в ПокерДом позволяет принять участие в ежедневных
+								турнирах.</li>
+							<li>Еженедельные турниры: игроки смогут соревноваться в проходящих еженедельно турнирах.</li>
+							<li>Ежемесячные турниры: большие ежемесячные турниры для большего волнения.</li>
+						</ol>
+						<p>Как правило, в турнирах распределяют 10-20 призовых мест, а общий призовой фонд делится между всеми
+							участниками.</p>
+						<h2>ТОП 10 аппаратов в казино</h2>
+						<p>Вот десять самых ярких игровых слотов, которые можно найти на ПокерДом:</p>
+						<ol>
+							<li>Aztec Century – слот по теме Древнего Египта с 5 барабанами и 15 линиями выплат.</li>
+							<li>Fruit Party Deluxe – классический фруктовый игровой автомат с яркой графикой.</li>
+							<li>Seven's On Fire – яркий слот с фруктовыми символами и риск-игрой на удвоение выигрыша.</li>
+							<li>Lady Luck Charm Of Fortune – с 5 барабанами и 20 линиями выплат. Роль скаттера играет изображение
+								магического шара, в слоте предусмотрен риск-игра.</li>
+							<li>Money – символами этой игры являются денежные знаки. Есть риск-игра после каждого удачливого раунда.
+							</li>
+							<li>Pirates Fortune – классический слот по морской тематике с 5 барабанами и 20 линиями выплат.</li>
+							<li>Simple Diamond – в этой игре 3 барабана и 17 линий выплат, есть бонусный раунд на удвоение выигрыша.
+								Выигрышными символами являются изображения драгоценных камней.</li>
+							<li>Magic Book Of Sphinx – классический автомат по теме Древнего Египта с атмосферной музыкой и
+								тематическими символами.</li>
+							<li>Computer World – с необычной графикой и веселой музыкой. Выигрышными символами являются изображения
+								смартфона, компьютера, периферийных устройств.</li>
+							<li>Bananas Balls – яркий автомат с бананом в главной роли. Фишкой слота является бонусный раунд на 45
+								фриспинов.</li>
+						</ol>
+						<h2>Бесплатный режим на игровых автоматах</h2>
+						<p>
+							Казино ПокерДом дарит возможность играть в игровые автоматы онлайн бесплатно, чтобы каждый желающий мог
+							попробовать свою удачу. Почти все слоты и видеоигры поддерживают демо-режим, позволяющий запустить игру
+							без ставок. Хотя в этом режиме выигрыши не выплачиваются реальными деньгами, у игроков есть возможность
+							разобраться в правилах и провести время с увлекательной игрой.
+						</p>
+						<p>Клуб ПокерДом позволяет играть в Интернете даже без регистрации. Для начала игры в режиме Демо достаточно
+							запустить желаемый слот и выбрать соответствующий режим загрузки.</p>
+						<h2>Как начать игру в казино</h2>
+						<p>Чтобы играть на деньги, сначала игрокам нужно пополнить свой аккаунт на сайте казино ПокерДом. Обычно
+							денежные средства засчитываются мгновенно, однако иногда процесс может занять до двух часов.</p>
+						<p>После успешного пополнения баланса игроки могут начинать игру:</p>
+						<ol>
+							<li>Выбрать желаемый игровой автомат из строки поиска или из списка на главной странице казино.</li>
+							<li>Нажмите на игру и дождитесь загрузки.</li>
+							<li>Сделать ставку.</li>
+							<li>Запустите вращение барабана с помощью кнопки Старт или Spin в зависимости от интерфейса игры.</li>
+							<li>Ожидать остановки барабана, чтобы узнать результат раунда.</li>
+						</ol>
+						<p>В случае успеха деньги можно вывести на свою карту. Кроме того, играя на ПокерДом Casino, игроки с каждым
+							спином увеличивают свои шансы на получение персонального бонуса.</p>
+						<h2>Мобильная версия</h2>
+						<p>
+							Официальные мобильные приложения казино позволяют игрокам наслаждаться любимыми азартными играми удобно и
+							легко с мобильных устройств на базе Android и iOS. Эти программы предоставляют полный доступ ко всем
+							игровым возможностям и личной учетной записи игрока.
+						</p>
+						<p>
+							Интерфейс мобильных программ ПокерДом максимально удобен и интуитивно понятен, что позволяет без лишних
+							усилий наслаждаться игрой даже в пути или в свободное время. Дополнительно для быстрого доступа к
+							мобильной версии казино с устройств можно добавить мобильный логотип на экран смартфона, что упростит вход
+							в игру из одного клика.
+						</p>
+						<h2>Платформы для игры</h2>
+						<p>
+							Казино ПокерДом предлагает разные платформы для игры, удовлетворяющие потребности разных пользователей.
+							Для игроков, пользующихся компьютером, доступна версия ПК казино под операционными системами Windows и
+							Linux. Это позволяет играть удобно со своего настольного компьютера, наслаждаясь полной геймплейной
+							отдачей.
+						</p>
+						<p>
+							Для мобильных пользователей на базе Android и iOS, клуб предлагает официальные мобильные приложения,
+							которые обеспечивают удобный доступ к азартным играм и личной учетной записи. Мобильная версия сайта
+							ПокерДом также доступна пользователям, которые не желают загружать дополнительные приложения, но желают
+							играть с мобильных устройств.
+						</p>
+						<h2>Скачать</h2>
+						<p>
+							Загрузить ПокерДом на свой ПК или мобильное устройство можно с официального сайта казино. Для
+							пользователей ПК подходят версии программ Windows и Linux, которые обеспечивают гладкую игру и полный
+							функционал
+							игровой платформы. Для мобильных пользователей есть официальные мобильные приложения для устройств на базе
+							Android и iOS, которые позволяют наслаждаться игрой с мобильных устройств в любое время и в любом
+							месте.
+						</p>
+						<h2>Способы пополнения счета и вывода ПокерДом выигрышей: комиссии и лимиты</h2>
+						<p>Основными методами оплаты на ПокерДом являются:</p>
+						<ul>
+							<li>Международные банковские карты VISA, MasterCard;</li>
+							<li>Apple Pay;</li>
+							<li>Гугл Пэй.</li>
+						</ul>
+						<p>
+							Казино не взимает комиссию от клиентов за пополнение счета. Все комиссии, связанные с платежными методами,
+							оплачиваются игровым порталом. Денежные средства поступают на игровой счет от 5 минут до 2 часов, в
+							зависимости от выбранного способа оплаты.
+						</p>
+						<p>
+							<em><strong>Вывод средств</strong></em>
+						</p>
+						<p>Минимальная сумма для вывода составляет 500 рублей. Комиссионные за вывод средств не взимаются при первой
+							выплате.</p>
+						<p>Основным направлением для получения выплат являются банковские карты VISA и MasterCard.</p>
+						<p>
+							Важно помнить, что перед выводом большой суммы, администрация казино может запросить верификацию аккаунта.
+							Игрокам необходимо будет предоставить электронные копии своего паспорта, водительских прав,
+							собственного селфи и копии банковской карты.
+						</p>
+						<h2>Служба поддержки</h2>
+						<p>Служба поддержки относится к быстрым и грамотным ответчикам и можно связаться с оператором с помощью
+							следующих способов:</p>
+						<ol>
+							<li>E-mail: Пользователи могут обратиться в службу поддержки. Отправка письма на эту электронную почту
+								позволит получить помощь и ответы на вопросы по игре в казино.</li>
+							<li>Телеграмм: Кроме того, можно обратиться к оператору через Телеграмм бот, который позволяет удобно и
+								быстро получить ответы на вопросы и решения проблем.</li>
+						</ol>
+						<p>
+							Служба поддержки готова помочь с любыми вопросами, связанными с игровыми услугами на платформе. Это могут
+							быть вопросы регистрации, верификации аккаунта, пополнения счета, вывода средств, условия бонусной
+							программы и многое другое.
+						</p>
+						<p>
+							Среднее время ожидания оператора составляет 2 минуты, что свидетельствует о быстром и эффективном отклике
+							со стороны службы поддержки. С помощью удобных способов связи игроки могут получить профессиональную
+							помощь и решить свои вопросы без лишних усилий.
+						</p>
+						<div class="faq" itemscope itemtype="http://schema.org/FAQPage">
+							<h2>FAQ</h2>
+							<div class="faq__item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+								<h3 class="faq__label" itemprop="name">Что это за сайт?
+								</h3>
+								<div class="faq__body" itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+									<p itemprop="text">Наш клуб - это гарант качественного онлайн-гемблинга, существующий десятки лет в
+										игорном бизнесе. Нам отдают предпочтение тысячи постоянных клиентов. Для себя Вы можете найти
+										любимые игровые автоматы, а также привычную атмосферу, узнать вкус побед и проникнуться настоящим
+										азартом.
+									</p>
+								</div>
+							</div>
+							<div class="faq__item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+								<h3 class="faq__label" itemprop="name">Как я могу зарегистрироваться?
+								</h3>
+								<div class="faq__body" itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+									<p itemprop="text">Для регистрации Вам достаточно нажать кнопку "Зарегистрироваться" в верхней части
+										сайта, указать Ваш действующий адрес электронной почты и придумать пароль, который Вы будете
+										использовать для входа в Ваш профиль. Также Вы можете зарегистрироваться через одну из
+										представленных социальных сетей. Это все! Вы являетесь владельцем аккаунта на нашем проекте с
+										возможностью играть, выигрывать и получать выигрыши.
+									</p>
+								</div>
+							</div>
+							<div class="faq__item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+								<h3 class="faq__label" itemprop="name">Как войти в аккаунт?
+								</h3>
+								<div class="faq__body" itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+									<p itemprop="text">Если Вы уже зарегистрированы на нашем сайте, Вы можете войти в Ваш аккаунт, нажав
+										на кнопку "Войти" и введя адрес Вашей электронной почты и пароль. Если Вы регистрировались через
+										социальную сеть, просто нажмите на иконку с ее изображением. Обратите внимание, что учетная запись в
+										нашем клубе соответствует учетной записи в Вашей социальной сети.
+									</p>
+								</div>
+							</div>
+							<div class="faq__item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+								<h3 class="faq__label" itemprop="name">Как играть на вашем сайте?
+								</h3>
+								<div class="faq__body" itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+									<p itemprop="text">Для того, чтобы начать игру на реальные деньги, Вам достаточно зарегистрироваться
+										или войти в свой профиль, пополнить свой игровой счёт, после чего навести указатель мыши на
+										понравившуюся игру и выбрать «Играть». В случае, если Вы хотите поиграть бесплатно, Вам достаточно
+										будет выбрать игру и нажать “Демо”.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="reviews">
+							<h2>Отзывы о казино ПокерДом</h2>
+							<div class="reviews__item" itemscope itemtype="https://schema.org/Review">
+								<div class="reviews__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+									<p itemprop="name">Павел</p>
+								</div>
+								<div class="reviews__body" itemprop="reviewBody">
+									<p>Не считая того, некие игроки отмечали некие недочеты казино. Один из самых
+										распространенных негативных отзывов касался специфического дизайна и графики слотов, выполненных в
+										классическом ретро-стиле. Это вызвало недовольство любителей современной графики и анимации.</p>
+								</div>
+								<div class="reviews__org" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+									<meta itemprop="name" content="Отзыв о pokerdom">
+								</div>
+							</div>
+							<div class="reviews__item" itemscope itemtype="https://schema.org/Review">
+								<div class="reviews__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+									<p itemprop="name">Карина</p>
+								</div>
+								<div class="reviews__body" itemprop="reviewBody">
+									<p>Играла на многих площадках, но именно в данный момент выиграла приличную сумму,
+										ПокерДом даёт лучше всех Пишет что вывод 1-4 дня,но деньги поступили на счёт через 2 минуты, я
+										обрадовалась ,так как 1-4 дня слишком, уже подумала развод. Персональный пакет присутствует за
+										активную
+										игру и после каждого вывода средств.</p>
+								</div>
+								<div class="reviews__org" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+									<meta itemprop="name" content="Отзыв о pokerdom">
+								</div>
+							</div>
+							<div class="reviews__item" itemscope itemtype="https://schema.org/Review">
+								<div class="reviews__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+									<p itemprop="name">Евгений</p>
+								</div>
+								<div class="reviews__body" itemprop="reviewBody">
+									<p>
+										В обзоре казино ПокерДом можно увидеть, что в целом отзывы игроков делятся на две основные
+										категории:
+										положительные и отрицательные. Некоторые пользователи хвалили игровое заведение за его оригинальный
+										дизайн
+										сайта, выбор игр и систему бонусов.
+									</p>
+								</div>
+								<div class="reviews__org" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+									<meta itemprop="name" content="Отзыв о pokerdom">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-right">
+						<a class="href" target="_blank"><img src="content/img/baner.gif" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-top">
+				<a href=""><img src="content/img/logo.png" alt="" /></a>
+				<div class="menu-fo">Лицензионное казино | Личный кабинет | Вход | Официальный сайт | Доступное зеркало 05 марта
+					2024 года</div>
+				<div class="f2"><img class="mob" src="content/img/fot.png" alt="" /></div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
